@@ -1,0 +1,448 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    
+}
+/*navigation bar here */
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(back.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#EEA641;
+    position: fixed;
+}
+
+.logo{
+    width: 90px;
+    cursor: pointer;
+    padding-left: 3%;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #072462;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.enrollbttn {
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: #072462;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 20px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  }
+  
+.enrollbttn{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+.enrollbttn:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .enrollbttn:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  
+  .enrollbttn:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+  /*'yong message sa landing page*/
+.greeting{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.greeting h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.greeting p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+#descri-1{
+    text-shadow: 2px 1px 10px whitesmoke;
+}
+
+/*slider na ayaw umayos piste T=T*/
+#slider{
+    width: 445px;
+    max-width:100%;
+    height:300px;
+    max-height:75%;
+    mask-border: 5px solid;
+    overflow:hidden;
+    margin:0 auto;
+    padding-top: 29%;
+    padding-bottom: 5%;
+}
+
+#slider img{
+    width: 100%;
+    height: auto;
+}
+#slider-inner{
+  position:relative;
+  width:2100px;
+  max-width:500%;
+  height:300px;
+  max-height:75%;
+  margin-left:-47px;
+  -webkit-transition:all .7s cubic-bezier(0.68,-0.55,0.265,1.55);
+  transition:all .7s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+#slider-inner div{
+  position:relative;
+  width:500px;
+  max-width:100%;
+  height:300px;
+  max-height:75%;
+  display:inline-block;
+  margin-left:-5px;
+  text-align:center;
+}
+
+#slider-inner div label{
+    position:absolute;
+    font-size: 40px;
+    border:2px solid #fff;
+    color: #fff;
+    border-radius:50%;
+    width: 42px;
+    height: 42px;
+    opacity:0;
+    cursor:pointer;
+    -webkit-transition:opacity .7s .4s, background .2s;
+    transition:opacity .7s .4s, background .2s;
+}
+
+#slider-inner div label:nth-of-type(1){
+    left: 80px;
+    top:100%;
+    -webkit-transform:translateY(-50%);
+    transform:translateY(-50%);
+    padding:0 11px 0 9px;
+    z-index:999;
+}
+#slider-inner div label:nth-of-type(2){
+    right:25px;
+    top:100%;
+    -webkit-transform:translateY(-50%);
+    transform:translateY(-50%);
+    padding:0 9px 0 11px;
+}
+#slider-inner div label:hover{
+    background:rgba(255,255,255,.5)
+}
+#first:checked ~ #slider #slider-inner{
+    margin-left:-47px;
+}
+#first:checked ~ #slider #slider-inner #first-slide label{
+    opacity:1;
+}
+#second:checked ~ #slider #slider-inner{
+    margin-left:-547px;
+}
+#second:checked ~ #slider #slider-inner #second-slide label{
+    opacity:1;
+}
+#third:checked ~ #slider #slider-inner{
+    margin-left:-1047px;
+}
+#third:checked ~ #slider #slider-inner #third-slide label{
+    opacity:1;
+}
+#fourth:checked ~ #slider #slider-inner{
+    margin-left:-1547px;
+}
+#fourth:checked ~ #slider #slider-inner #fourth-slide label{
+    opacity:1;
+}
+   
+input {
+    display: none;
+}
+
+/*about kineme*/
+.aboutcmu{
+    width: 100%;
+    height:auto;
+    background-color: #072462;
+}
+
+#mission{
+    font-size: 45px;
+    text-transform: uppercase;
+    color: white;
+    padding-top: 100px;
+    padding-left: 5%;
+    
+}
+
+#missiondes{
+    color: white;
+    padding-bottom: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 20px;
+}
+
+#vision{
+    font-size: 45px;
+    text-transform: uppercase;
+    color: white;
+    padding-top: 30px;
+    padding-left: 5%;
+    
+}
+
+#visiondes{
+    color: white;
+    padding-bottom: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 20px;
+}
+
+#cvalues{
+    font-size: 45px;
+    text-transform: uppercase;
+    color: white;
+    padding-top: 30px;
+    padding-left: 5%;
+}
+
+.cvaluesdes{
+    color: white;
+    padding-bottom: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 20px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#history{
+    font-size: 45px;
+    text-transform: uppercase;
+    color: white;
+    padding-top: 50px;
+    text-align: center;
+}
+
+#angdaminito{
+    color: white;
+    padding-bottom: 10px;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 20px;
+}
+
+.bttn{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.readmore{
+    font-weight: bold;
+    border-radius: 4px;
+    background-color:#EEA641;
+    border: none;
+    color: #072462;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 20px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+
+.readmore{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+.readmore:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .readmore:hover{
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  
+  .readmore:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+
+/*Programs*/
+.availprograms{
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(back2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: auto;
+
+}
+.title{
+   font-size: 45px;
+   text-transform: uppercase;
+   font-weight: bold;
+   color: white;
+   text-align: center;
+   padding-top: 2%;
+   padding-bottom: 2%;
+   background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(back.jpg);
+}
+
+.college{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #072462;
+    text-shadow: 0px 0px 10px whitesmoke;
+}
+
+.prog{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.subprog{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    color: white;
+    
+}
+
+.college{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #072462;
+    text-shadow: 0px 0px 10px whitesmoke;
+}
+
+.contct{
+    background-color: #f18930;
+}
+
+#cntctus{
+    color: white;
+    text-transform: uppercase;
+    padding-top: 3%;
+    text-align: center;
+    font-size: 35px;
+}
+
+.infor{
+    color: white;
+    padding: 7px;
+    text-align: center;
+}
+
+#nameschool{
+    width:485px;
+    height: auto;
+    padding-top: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bottom-bar{
+    background: #f18930;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 0px;
+}
+.bottom-bar p{
+    color: #343434;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
+}
+
+#nslogo{
+    width: auto;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
